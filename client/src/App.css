@@ -335,7 +335,7 @@ footer {
     opacity: 0;
   }
 }
-/* 1. Стиль для зображення (допомагає масштабувати) */
+export default Header;
 .gallery-image {
     max-width: 100%; 
     height: auto;   
