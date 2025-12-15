@@ -76,10 +76,11 @@ const PhotoGallery = () => {
                         className="photo-card active"
                         style={{'--transition-delay': `${index * 0.1}s`}} 
                     >
-                        <img 
+                    <img 
                             src={photo.src} 
                             alt={photo.caption} 
                             loading="lazy" 
+                            className="gallery-image" // КЛАС ДЛЯ АДАПТИВНОСТІ
                         />
                         <p className="photo-caption">{photo.caption}</p>
                     </div>

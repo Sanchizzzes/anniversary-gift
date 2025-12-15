@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* ВАШ ЗНАЙДЕНИЙ CSS-ФАЙЛ */
+
+/* 1. Базові стилі для адаптивного зображення */
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2. Стилі для адаптивної сітки (на великих екранах 5 колонок) */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px; 
+    padding: 10px;
+}
+
+/* 3. Медіазапит для СМАРТФОНІВ (менше 600px) */
+@media (max-width: 600px) {
+    .photo-gallery {
+        /* На телефонах відображаємо 2 фото в ряд */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+}
