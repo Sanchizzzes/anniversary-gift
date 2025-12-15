@@ -335,7 +335,6 @@ footer {
     opacity: 0;
   }
 }
-export default Header;
 .gallery-image {
     max-width: 100%; 
     height: auto;   
