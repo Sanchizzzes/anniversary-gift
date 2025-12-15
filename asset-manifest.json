@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/anniversary-gift/static/css/main.974b77eb.css",
-    "main.js": "/anniversary-gift/static/js/main.00b64ee2.js",
+    "main.css": "/anniversary-gift/static/css/main.b2eb9077.css",
+    "main.js": "/anniversary-gift/static/js/main.aec4eaa5.js",
     "static/js/453.eb570f4f.chunk.js": "/anniversary-gift/static/js/453.eb570f4f.chunk.js",
     "index.html": "/anniversary-gift/index.html",
-    "main.974b77eb.css.map": "/anniversary-gift/static/css/main.974b77eb.css.map",
-    "main.00b64ee2.js.map": "/anniversary-gift/static/js/main.00b64ee2.js.map",
+    "main.b2eb9077.css.map": "/anniversary-gift/static/css/main.b2eb9077.css.map",
+    "main.aec4eaa5.js.map": "/anniversary-gift/static/js/main.aec4eaa5.js.map",
     "453.eb570f4f.chunk.js.map": "/anniversary-gift/static/js/453.eb570f4f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.974b77eb.css",
-    "static/js/main.00b64ee2.js"
+    "static/css/main.b2eb9077.css",
+    "static/js/main.aec4eaa5.js"
   ]
 }
