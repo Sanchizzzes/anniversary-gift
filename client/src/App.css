@@ -1,0 +1,337 @@
+/* ... (інші стилі з попередньої відповіді) ... */
+
+/* Оновлені стилі для галереї */
+.gallery-section {
+  overflow: hidden; /* Обрізаємо все, що виходить за межі секції */
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: space-around; /* Розподіляємо простір між картками */
+  gap: 20px;
+  /* Додаємо плавний перехід для трансформації, якщо вона буде потрібна */
+  transition: transform 0.5s ease-in-out;
+}
+
+.photo-card {
+  /* Тепер кожна картка займає третину доступного простору */
+  flex: 1 1 30%; 
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 51, 102, 0.2); /* Рожева тінь для романтики */
+  opacity: 1; /* Базове значення */
+  transform: scale(1); /* Базове значення */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 280px; /* Фіксована висота для однакового вигляду */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.03);
+}
+
+.photo-caption {
+  padding: 10px 5px;
+  font-size: 0.9em;
+  color: #ff3366;
+  background-color: #ffe8ee;
+  margin: 0;
+}
+
+.gallery-hint {
+    margin-top: 15px;
+    font-style: italic;
+    color: #999;
+}
+/* --- ГЛОБАЛЬНІ СТИЛІ --- */
+.App {
+  /* Гарний шрифт з засічками (як у романтичній книзі) */
+  font-family: 'Georgia', serif;
+  text-align: center;
+  color: #333;
+  /* М'який кремово-рожевий фон */
+  background-color: #fef8f8; 
+  padding-bottom: 50px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif; /* Можна додати цей шрифт через Google Fonts */
+  color: #88304e; /* Глибокий винний/бордовий */
+}
+
+/* --- СТИЛІ ЗАГОЛОВКА --- */
+.header {
+  /* Дуже світлий, майже білий фон, але з м'яким відтінком */
+  background-color: #fffafc; 
+  padding: 50px 20px 30px;
+  color: #88304e; 
+  /* Легка тінь знизу */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  /* Додаємо невеликий градієнт або тінь для об'єму */
+  text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5); 
+}
+/* ... (існуючі стилі Header) ... */
+
+/* СТИЛІ ДЛЯ ІКОНКИ-СЕРЦЯ З ЦИФРОЮ "6" */
+
+.anniversary-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40px; /* Розмір контейнера серця */
+  height: 40px;
+  margin-left: 15px;
+  vertical-align: middle;
+  transform: rotate(-45deg); /* Повертаємо, щоб отримати форму ромба/серця */
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white; /* Колір тексту (цифри 6) */
+  z-index: 10;
+}
+
+/* Створення форми серця за допомогою псевдоелементів */
+.anniversary-icon::before,
+.anniversary-icon::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #e56b7c; /* Романтичний рожевий колір */
+  border-radius: 50%; /* Створюємо кола */
+  z-index: -1; /* Відправляємо форму під цифру */
+}
+
+.anniversary-icon::before {
+  top: -20px; /* Зміщуємо перше коло вгору */
+  left: 0;
+}
+
+.anniversary-icon::after {
+  left: 20px; /* Зміщуємо друге коло праворуч */
+  top: 0;
+}
+
+/* --- СТИЛІ ОСНОВНИХ СЕКЦІЙ (БЛОКІВ) --- */
+main > section {
+  padding: 40px 30px;
+  margin: 35px auto;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 20px; /* Більш м'які кути */
+  /* Елегантна тінь, що створює ефект підняття */
+  box-shadow: 0 10px 30px rgba(136, 48, 78, 0.1); 
+  /* Тонка рожева рамка */
+  border: 1px solid #f9e2e6; 
+  transition: transform 0.3s ease;
+}
+
+main > section:hover {
+  transform: translateY(-3px); /* Легкий ефект підняття при наведенні */
+}
+
+/* --- 1. СЕКЦІЯ ЛІЧИЛЬНИКА (SixMonthMilestone) --- */
+.time-counter {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.6em;
+  margin-top: 25px;
+  color: #e56b7c; /* Яскравіший рожевий */
+}
+
+.time-counter span {
+  display: block;
+  font-weight: bold;
+  padding: 12px 18px;
+  background-color: #fff0f0; /* Дуже світлий фон */
+  border-radius: 10px;
+  border: 1px solid #ffd4df;
+  min-width: 80px;
+}
+
+.milestone-text {
+    font-style: italic;
+    color: #999;
+    margin-top: 20px;
+}
+
+/* --- 2. СЕКЦІЯ ГАЛЕРЕЇ ФОТО (PhotoGallery) --- */
+
+.photo-gallery {
+  display: flex;
+  justify-content: space-around; 
+  gap: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.photo-card {
+  flex: 1 1 18%; 
+  max-width: 180px; 
+  overflow: hidden;
+  border-radius: 10px;
+  /* Гарна, помітна тінь */
+  box-shadow: 0 4px 15px rgba(229, 107, 124, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(229, 107, 124, 0.5); /* Тінь стає більш виразною */
+}
+
+.photo-caption {
+  padding: 10px 5px;
+  font-size: 0.85em;
+  color: #88304e;
+  background-color: #f7e8ee; /* Дуже світлий фон для підпису */
+  margin: 0;
+}
+
+/* --- 3. СЕКЦІЯ ВІРША (LovePoem) --- */
+
+.poem-text {
+  text-align: left;
+  line-height: 1.9;
+  font-style: italic;
+  font-size: 1.15em;
+  color: #555;
+  margin-top: 20px;
+}
+
+.poem-line {
+    margin-bottom: 1em; /* Відступи між рядками вірша */
+}
+
+/* Спеціальна виділяюча лінія для вірша */
+.poem-text::before {
+    content: "“";
+    display: block;
+    font-size: 3em;
+    color: #e56b7c;
+    margin-bottom: -10px;
+}
+
+/* --- 4. СЕКЦІЯ ПОДЯКИ (ThankYouNote) --- */
+
+.thankyou-section p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin: 15px auto;
+    max-width: 700px;
+}
+
+.signature {
+  margin-top: 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #88304e; 
+  font-family: 'Brush Script MT', cursive; /* Спробуйте знайти гарний курсивний шрифт */
+}
+
+/* --- ПІДВАЛ (FOOTER) --- */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #ffeaea; /* Світло-рожевий фон */
+  color: #88304e;
+  font-size: 0.9em;
+  border-top: 2px dashed #f9e2e6;
+}
+
+/* --- Адаптація для мобільних пристроїв --- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .time-counter {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .photo-gallery {
+    /* Знову показуємо лише 3 фото на мобільному */
+    gap: 10px;
+    justify-content: center;
+  }
+  .photo-card {
+    flex: 1 1 30%;
+    max-width: 100%;
+  }
+}
+/* --- СТИЛІ АНІМАЦІЇ СЕРЦЯ (ДОДАТИ В КІНЕЦЬ App.css) --- */
+
+/* Контейнер анімації, що покриває весь екран */
+.heart-animation-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Дозволяє клікам проходити крізь нього */
+  overflow: hidden; 
+  z-index: 999; /* Високий z-index */
+}
+
+/* Стиль для кожного окремого серця */
+.heart {
+  position: absolute;
+  top: -10vh; /* Починаємо рух вище екрану */
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  animation-name: fall;
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite; 
+}
+
+/* Формування серця за допомогою псевдоелементів */
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #e56b7c; /* Колір сердець */
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: 10px;
+  top: 0;
+}
+
+/* КЛЮЧОВІ КАДРИ: визначають рух серця */
+@keyframes fall {
+  0% {
+    top: -10vh;
+    opacity: 0.7;
+  }
+  100% {
+    top: 100vh; /* Серце падає за межі екрану */
+    opacity: 0;
+  }
+}
